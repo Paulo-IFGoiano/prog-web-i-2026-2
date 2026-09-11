@@ -68,8 +68,110 @@
             </tr>
         </tbody>
     </table>
-    
-    
+
+        <form action="#" method="post" id="form-x">
+            <fieldset>
+                <legend>Dados para Contato</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome"  name="nome" placeholder="Ex.: João da Silva">
+                <br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email"  name="email" placeholder="joao@exemplo.com">
+                <br><br>
+                <label for="tel">Telefone:</label>
+                <input type="text" id="fone"  name="fone" placeholder="(DDD) 00000-0000">
+                <br><br>
+                <label for="msg">Mensagem:</label>
+                <textarea id="msg" 
+                name="msg" 
+                rows="6" 
+                placeholder="Escreva sua mensagem aqui..."></textarea>
+
+                <label for="municipio">Município</label>
+                <select id="municipio" name="municipio">
+                <option value="">Selecione...</option>
+                <option value="ceres">Ceres</option>
+                <option value="rialma">Rialma</option>
+                </select>
+                <br><br>
+            </fieldset>
+            <button type="submit">Enviar mensagem</button>
+        </form>
+
+        <!-- Dados de pré-cadastro -->
+
+        <h2>Pré-cadastro</h2>
+        <p>Preenchar o formulátio abaixo.</p>
+
+        <form action="#" method="post" id="form-precadastro" >
+            <fieldset>
+                <legend>Dados do Proprietário</legend>
+                <label for="cp-nome">Nome:</label>
+                <input type="text" id="cp-nome" name="cp-nome" 
+                required 
+                minlength="3"
+                maxlength="100">
+                
+                <!-- Usando o pattern -->
+                <label for="cp-cpf">CPF:</label>
+                <input type="text" id="cp-cpf" name="cpf"
+                placeholder="000.000.000-00"
+                required
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                title="Formato: 000.000.000-00"
+                >
+
+                <label for="cp-email">E-mail:</label>
+                <input type="email" id="cp-email" name="cp-email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados da Propriedade</legend>
+                <label for="cp-municipio">Município</label>
+                <select id="cp-municipio" name="municipio">
+                    <option value="">Selecione...</option>
+                    <option value="ceres">Ceres</option>
+                    <option value="rialma">Rialma</option>
+                    <option value="rubiataba">Rubiataba</option>
+                    <option value="outro">Outro município</option>
+                </select>
+
+                <label for="cp-area">Área total:</label>
+                <input type="number" id="cp-area" name="cp-area"
+                min="1" max="9999">
+
+                <p>Culturas produzidas:</p>
+                <label>
+                    <input  type="checkbox" name="cultura" value="soja"> Soja
+                </label>
+                <label>
+                    <input  type="checkbox" name="cultura" value="milho"> Milho
+                </label>
+                <label>
+                    <input  type="checkbox" name="cultura" value="sorgo"> Sorgo
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferência de Contato</legend>
+                <label>
+                    <input  type="radio" name="contato-pref" value="email"> E-mail
+                </label>
+                <label>
+                    <input  type="radio" name="contato-pref" value="telefone"> Telefone
+                </label>
+                <label>
+                    <input  type="radio" name="contato-pref" value="whats"> Whatsapp
+                </label>
+            </fieldset>
+            <button type="submit">Enviar</button>
+
+        </form>
+
+
+
+
+        <br>
         <h2>Contato</h2>
         <a href="mailto:contato@agrovale.coop.br">contato@agrovale.coop.br</a>
         <p>
@@ -82,7 +184,5 @@
                 — CNPJ fictício para fins didáticos
             </small>
         </p>
-    
-
 </body>
 </html>
