@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroVale Cooperativa — Vale de São Patrício</title>
+</head>
+<body>
+   
+    <header id="cabecalho">
+        <img src="img/logo.png"  
+        alt="Logo da AgroVale Cooperativa"
+        widh="400"
+        height="120">
+
+        <h1>AgroVale Cooperativa</h1>
+        <nav id="menu">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#producao">Produção</a></li>
+                <li><a href="#contato">Contato</a></li>    
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+
+        <section id="sobre-agrovale">
+            <h2 id="sobre">Sobre a AgroVale</h2>
+            <p>
+                A AgroVale <strong>é uma Cooperativa muito relevante</strong> no Vale do São Patrício. Ela foi fundada em 1987
+                por produtores rurais da região de Ceres e Rialma, no Cerrado goiano.
+            </p>
+            <p>
+                Reunimos mais de 340 cooperados em 18 municípios,
+            com foco na produção de grãos e no fortalecimento da
+            agricultura familiar e empresarial do Vale.
+            </p>
+        </section>
+
+        <aside id="aside-aviso">
+            <h3>Aviso - Safra 2026</h3>
+            <p>Prazo para contratação dos serviços para safra 206 vai até
+                <strong>30 de outubro de 2026.</strong>
+            </p>
+        </aside>
+
+        <section id="secao-producao">
+            <h2 id="producao"> Produção de 2025</h2>
+            <p>
+                Números da safra 2024/2025:
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cultura</th>
+                        <th>Área (alqueires)</th>
+                        <th>Produção (sacas)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Soja</td>
+                        <td>1.200</td>
+                        <td>50.000</td>
+                    </tr>
+                    <tr>
+                        <td>Milho</td>
+                        <td>1.200</td>
+                        <td>50.000</td>
+                    </tr>
+                    <tr>
+                        <td>Sorgo</td>
+                        <td>1.200</td>
+                        <td>50.000</td>
+                    </tr>
+                    <tr>
+                        <td>Arroz</td>
+                        <td>1.200</td>
+                        <td>50.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="secao-destaque">
+            <h2>Cooperados em destaque</h2>
+            <article>
+                <h3>João da Silva</h3>
+                <p>"A cooperativa mudou minha forma de lidar com meu plantio."</p>
+            </article>
+            <article>
+                <h3>Maria</h3>
+                <p><em>"Sou grata por ter conhecido Agrovale!"</em></p>
+            </article>
+        </section>
+
+
+        <section id="secao-contato">
+            <h2>Contato</h2>
+
+            <form action="#" method="post" id="form-x">
+                <fieldset>
+                    <legend>Dados para Contato</legend>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome"  name="nome" placeholder="Ex.: João da Silva">
+                    <br><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email"  name="email" placeholder="joao@exemplo.com">
+                    <br><br>
+                    <label for="tel">Telefone:</label>
+                    <input type="text" id="fone"  name="fone" placeholder="(DDD) 00000-0000">
+                    <br><br>
+                    <label for="msg">Mensagem:</label>
+                    <textarea id="msg" 
+                    name="msg" 
+                    rows="6" 
+                    placeholder="Escreva sua mensagem aqui..."></textarea>
+
+                    <label for="municipio">Município</label>
+                    <select id="municipio" name="municipio">
+                    <option value="">Selecione...</option>
+                    <option value="ceres">Ceres</option>
+                    <option value="rialma">Rialma</option>
+                    </select>
+                    <br><br>
+                </fieldset>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+
+            <!-- Dados de pré-cadastro -->
+            <section id="secao-precadastro">
+                <h2>Pré-cadastro</h2>
+                <p>Preenchar o formulátio abaixo.</p>
+
+                <form action="#" method="post" id="form-precadastro" >
+                    <fieldset>
+                        <legend>Dados do Proprietário</legend>
+                        <label for="cp-nome">Nome:</label>
+                        <input type="text" id="cp-nome" name="cp-nome" 
+                        required 
+                        minlength="3"
+                        maxlength="100">
+                        
+                        <!-- Usando o pattern -->
+                        <label for="cp-cpf">CPF:</label>
+                        <input type="text" id="cp-cpf" name="cpf"
+                        placeholder="000.000.000-00"
+                        required
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                        title="Formato: 000.000.000-00"
+                        >
+
+                        <label for="cp-email">E-mail:</label>
+                        <input type="email" id="cp-email" name="cp-email" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados da Propriedade</legend>
+                        <label for="cp-municipio">Município</label>
+                        <select id="cp-municipio" name="municipio">
+                            <option value="">Selecione...</option>
+                            <option value="ceres">Ceres</option>
+                            <option value="rialma">Rialma</option>
+                            <option value="rubiataba">Rubiataba</option>
+                            <option value="outro">Outro município</option>
+                        </select>
+
+                        <label for="cp-area">Área total:</label>
+                        <input type="number" id="cp-area" name="cp-area"
+                        min="1" max="9999">
+
+                        <p>Culturas produzidas:</p>
+                        <label>
+                            <input  type="checkbox" name="cultura" value="soja"> Soja
+                        </label>
+                        <label>
+                            <input  type="checkbox" name="cultura" value="milho"> Milho
+                        </label>
+                        <label>
+                            <input  type="checkbox" name="cultura" value="sorgo"> Sorgo
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferência de Contato</legend>
+                        <label>
+                            <input  type="radio" name="contato-pref" value="email" required> E-mail
+                        </label>
+                        <label>
+                            <input  type="radio" name="contato-pref" value="telefone"> Telefone
+                        </label>
+                        <label>
+                            <input  type="radio" name="contato-pref" value="whats"> Whatsapp
+                        </label>
+                    </fieldset>
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </section>
+        </main>
+
+
+
+        <br>
+        <footer id="rodape">
+            <section id="secao-footer-contato">
+            <h2>Contato</h2>
+            <a href="mailto:contato@agrovale.coop.br">contato@agrovale.coop.br</a>
+            
+                <p>
+                    Av. Central, 1.200 — Ceres, GO — CEP 76.300-000<br>
+                    Telefone: (62) 3323-0000
+                </p>
+            </section>
+
+            <section id="secao-direitos">
+                <small>
+                    AgroVale Cooperativa de Produtores do Vale de São Patrício
+                    — CNPJ fictício para fins didáticos
+                </small>
+            </section>
+            
+        </footer>
+</body>
+</html>
