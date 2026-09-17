@@ -6,33 +6,7 @@
   <title>AgroVale Cooperativa — Vale de São Patrício</title>
 </head>
 
-<!--
-  ============================================================
-  GABARITO — AULA 05
-  AgroVale com estrutura semântica completa.
 
-  HIERARQUIA DO BODY:
-    body
-    ├── header#cabecalho
-    │   ├── img.logo-principal
-    │   └── nav#menu-principal
-    ├── main#conteudo-principal
-    │   ├── section#sobre.secao
-    │   ├── aside.aviso-safra         ← novo na Aula 05
-    │   ├── section#producao.secao.destaque
-    │   ├── section#destaques.secao   ← novo na Aula 05
-    │   │   ├── article.card-cooperado ← novo na Aula 05
-    │   │   └── article.card-cooperado ← novo na Aula 05
-    │   └── section#associe-se.secao
-    └── footer#rodape
-        └── section#contato.secao
-
-  DECISÕES SEMÂNTICAS DOCUMENTADAS:
-    - aside: conteúdo sobre prazo da safra — complementar, removível sem perder sentido.
-    - article: cada card de cooperado é autônomo — faz sentido publicado isoladamente.
-    - div.container: comentado onde apareceria em setembro (por CSS), ainda não no HTML.
-  ============================================================
--->
 
 <body id="pagina-agrovale">
 
@@ -56,14 +30,9 @@
     </nav>
 
   </header>
-  <!-- /header -->
-
-  <!-- main: conteúdo principal e único da página.
-       Único main por página — as seções internas usam section, não main. -->
+ 
   <main id="conteudo-principal">
 
-    <!-- section: bloco temático com título.
-         Faz parte do fluxo da página — não faz sentido isolado. -->
     <section id="sobre" class="secao">
       <h2>Sobre a AgroVale</h2>
       <p>
@@ -76,11 +45,7 @@
         <em>agricultura familiar e empresarial</em> do Vale.
       </p>
     </section>
-    <!-- /section#sobre -->
-
-    <!-- aside: conteúdo COMPLEMENTAR — relacionado mas não essencial ao fluxo.
-         CONFIRMAÇÃO: se este aside for removido, a página mantém sentido completo.
-         O prazo da safra é um aviso adicional, não parte do conteúdo informativo principal. -->
+ 
     <aside class="aviso-safra">
       <h3>Aviso — Safra 2026</h3>
       <p>
@@ -89,10 +54,7 @@
         Use o formulário de contato abaixo ou ligue: (62) 3323-0000.
       </p>
     </aside>
-    <!-- /aside.aviso-safra -->
-
-    <!-- section: outro bloco temático com título.
-         class="secao destaque" — duas classes: base + modificador para CSS em setembro. -->
+    
     <section id="producao" class="secao destaque">
       <h2>Produção 2025</h2>
       <p>Números da safra 2024/2025 (1 alqueire goiano = 4,84 ha):</p>
@@ -134,38 +96,28 @@
         </tbody>
       </table>
     </section>
-    <!-- /section#producao -->
-
-    <!-- section: agrupa os cards de cooperados.
-         Os articles dentro são autônomos; esta section os reúne com um título. -->
+   
     <section id="destaques" class="secao">
       <h2>Cooperados em destaque</h2>
 
-      <!-- article: card de cooperado AUTÔNOMO.
-           CONFIRMAÇÃO: este card faz sentido publicado isoladamente —
-           em um feed de notícias, em um e-mail ou em outra página do site.
-           Não depende do contexto da página para ser compreendido. -->
+     
       <article class="card-cooperado">
         <h3>João Batista Ferreira</h3>
         <p>Ceres, GO — Soja e milho — 18 anos na cooperativa</p>
         <p><em>"A AgroVale mudou a forma como planejo minha safra.
           O acesso técnico e o crédito cooperativo transformaram minha produtividade."</em></p>
       </article>
-      <!-- /article -->
-
-      <!-- article: segundo card — igualmente autônomo -->
+      
       <article class="card-cooperado">
         <h3>Ana Clara Rodrigues</h3>
         <p>Rubiataba, GO — Sorgo e feijão — 7 anos na cooperativa</p>
         <p><em>"Entrar para a cooperativa foi a melhor decisão da minha vida como produtora.
           O apoio na comercialização fez toda a diferença."</em></p>
       </article>
-      <!-- /article -->
+      
 
     </section>
-    <!-- /section#destaques -->
-
-    <!-- section: formulário de pré-cadastro — bloco temático com título e form -->
+    
     <section id="associe-se" class="secao">
       <h2>Associe-se à AgroVale</h2>
       <p>Preencha o formulário para iniciar seu pré-cadastro de cooperado.</p>
@@ -224,17 +176,13 @@
 
       </form>
     </section>
-    <!-- /section#associe-se -->
+   
 
   </main>
-  <!-- /main -->
-
-  <!-- footer: rodapé da página — créditos, contato, informações secundárias.
-       Pode conter um section interno para o formulário de contato. -->
+  
   <footer id="rodape">
 
-    <!-- section dentro do footer: o formulário de contato tem h2 e conteúdo próprio.
-         É uma section semântica — bloco temático com título — mesmo dentro do footer. -->
+    
     <section id="contato" class="secao">
       <h2>Contato</h2>
 
@@ -259,7 +207,7 @@
       </form>
 
     </section>
-    <!-- /section#contato -->
+    >
 
     <p>Av. Central, 1.200 — Ceres, GO — CEP 76.300-000<br>
        Telefone: (62) 3323-0000</p>
@@ -278,7 +226,7 @@
     </p>
 
   </footer>
-  <!-- /footer -->
+ 
 
 </body>
 </html>
