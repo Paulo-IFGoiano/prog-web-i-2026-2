@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroVale — Cooperativa Agrícola do Cerrado</title>
+  <link rel="stylesheet" href="AP09_base.css">
+</head>
+<body>
+
+  <!-- =============================================
+       CABEÇALHO
+  ============================================= -->
+  <header id="cabecalho">
+    <div class="logo-texto">🌿 AgroVale</div>
+    <nav id="menu-principal">
+      <ul class="nav-links">
+        <li><a href="#sobre" class="link-nav">Sobre</a></li>
+        <li><a href="#produtos" class="link-nav">Produtos</a></li>
+        <li><a href="#cooperados" class="link-nav">Cooperados</a></li>
+        <li><a href="#contato" class="link-nav">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section id="hero">
+    <div class="hero-conteudo">
+      <h1 class="titulo-hero">Do Cerrado para a sua mesa</h1>
+      <p class="hero-subtitulo">A AgroVale é uma cooperativa goiana que conecta pequenos produtores do Cerrado a consumidores que valorizam alimentos naturais, sustentáveis e com identidade regional.</p>
+      <a href="#produtos" class="btn-hero">Conheça nossos produtos</a>
+    </div>
+    <div class="hero-imagem">
+      <img src="https://placehold.co/560x360/1E5631/FAF9F4?text=AgroVale+Cerrado" alt="Paisagem do Cerrado goiano com frutos nativos">
+    </div>
+  </section>
+
+  <!-- =============================================
+       LAYOUT PRINCIPAL: conteúdo + aside
+  ============================================= -->
+  <div class="layout-conteudo">
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal">
+
+      <!-- Sobre -->
+      <section id="sobre">
+        <h2>Sobre a Cooperativa</h2>
+        <p>Fundada em 1998 por famílias agricultoras do Vale do Rio dos Bois, a AgroVale reúne hoje mais de 120 cooperados nos municípios de Ceres, Rialma, Carmo do Rio Verde e Rubiataba. Trabalhamos com manejo sustentável do Cerrado, preservando a biodiversidade e garantindo renda justa para os produtores.</p>
+        <p style="margin-top:1rem;">Nossos produtos são colhidos no ponto certo de maturação e processados em nossa unidade certificada, seguindo as normas da agricultura familiar e do comércio justo.</p>
+      </section>
+
+      <!-- Produtos -->
+      <section id="produtos">
+        <h2>Produtos do Cerrado</h2>
+        <p style="margin-bottom:1.5rem;">Frutos nativos, polpas artesanais e derivados — direto do bioma mais biodiverso do planeta.</p>
+
+        <div class="grade-cards">
+
+          <!-- Card 1: Baru -->
+          <article class="card">
+            <img src="https://placehold.co/400x200/1E5631/FAF9F4?text=Castanha+de+Baru" alt="Castanha de Baru torrada">
+            <div class="card-corpo">
+              <h3 class="card-titulo">Castanha de Baru</h3>
+              <p class="card-descricao">Torrada artesanalmente em forno de lenha. Rica em proteínas e gorduras saudáveis, com sabor que lembra amendoim com castanha-de-caju. Certificação orgânica.</p>
+              <div class="card-rodape">
+                <span class="card-preco">R$ 28,00 / 200g</span>
+                <button class="btn-card">Ver mais</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Pequi -->
+          <article class="card">
+            <img src="https://placehold.co/400x200/C8892A/FAF9F4?text=Polpa+de+Pequi" alt="Polpa de Pequi do Cerrado">
+            <div class="card-corpo">
+              <h3 class="card-titulo">Polpa de Pequi</h3>
+              <p class="card-descricao">Polpa congelada processada em até 24h após a colheita manual. Ideal para arroz com pequi, frango e pratos típicos goianos. Embalagem de 400g.</p>
+              <div class="card-rodape">
+                <span class="card-preco">R$ 14,50 / 400g</span>
+                <button class="btn-card">Ver mais</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Cagaita -->
+          <article class="card">
+            <img src="https://placehold.co/400x200/3FA06A/FAF9F4?text=Suco+de+Cagaita" alt="Suco natural de Cagaita">
+            <div class="card-corpo">
+              <h3 class="card-titulo">Suco de Cagaita</h3>
+              <p class="card-descricao">Fruto nativo com sabor cítrico e refrescante, semelhante ao caju. Colhido nos meses de setembro e outubro. Suco 100% natural, sem conservantes ou adição de açúcar.</p>
+              <div class="card-rodape">
+                <span class="card-preco">R$ 9,90 / 300ml</span>
+                <button class="btn-card">Ver mais</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Jatobá -->
+          <article class="card">
+            <img src="https://placehold.co/400x200/1E8449/FAF9F4?text=Farinha+de+Jatob%C3%A1" alt="Farinha de Jatobá">
+            <div class="card-corpo">
+              <h3 class="card-titulo">Farinha de Jatobá</h3>
+              <p class="card-descricao">Farinha integral obtida da polpa seca do jatobá, rica em fibras e ferro. Usada em bolos, pães e vitaminas. Produto raro, com produção limitada à safra de agosto.</p>
+              <div class="card-rodape">
+                <span class="card-preco">R$ 22,00 / 250g</span>
+                <button class="btn-card">Ver mais</button>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- .grade-cards -->
+      </section><!-- #produtos -->
+
+      <!-- Contato -->
+      <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Para pedidos, parcerias e visitas à cooperativa:</p>
+        <address style="margin-top:1rem;font-style:normal;line-height:2;">
+          <strong>AgroVale Cooperativa Agrícola</strong><br>
+          Rodovia GO-080, km 14 — Ceres, GO<br>
+          CEP 76300-000<br>
+          contato@agrovale.coop.br<br>
+          (62) 3323-0000
+        </address>
+      </section>
+
+    </main><!-- #conteudo-principal -->
+
+    <!-- ASIDE LATERAL -->
+    <aside class="aside-lateral">
+
+      <div class="aside-bloco">
+        <h3>Calendário de Safras</h3>
+        <ul class="lista-safras">
+          <li><span class="mes">Jan–Mar</span> Cagaita, Mangaba</li>
+          <li><span class="mes">Abr–Jun</span> Pequi, Jatobá</li>
+          <li><span class="mes">Jul–Set</span> Baru, Buriti</li>
+          <li><span class="mes">Out–Dez</span> Araticum, Gabiroba</li>
+        </ul>
+      </div>
+
+      <div class="aside-bloco">
+        <h3>Números da Cooperativa</h3>
+        <ul class="lista-numeros">
+          <li><span class="num-destaque">120+</span> cooperados ativos</li>
+          <li><span class="num-destaque">8</span> municípios</li>
+          <li><span class="num-destaque">25</span> anos de história</li>
+          <li><span class="num-destaque">100%</span> agricultura familiar</li>
+        </ul>
+      </div>
+
+      <div class="aside-bloco aside-destaque">
+        <h3>Certificações</h3>
+        <p>Orgânico Brasil · SisOrg</p>
+        <p>Comércio Justo · FLO</p>
+        <p>Produto do Cerrado</p>
+      </div>
+
+    </aside><!-- .aside-lateral -->
+
+  </div><!-- .layout-conteudo -->
+
+  <!-- =============================================
+       RODAPÉ
+  ============================================= -->
+  <footer id="rodape">
+    <p>&copy; 2026 AgroVale Cooperativa Agrícola — Ceres, Goiás · Todos os direitos reservados</p>
+    <p style="margin-top:0.5rem;opacity:.7;">Desenvolvido como projeto acadêmico — Programação Web I · IF Goiano Campus Ceres · BSI 4º Período</p>
+  </footer>
+
+</body>
+</html>

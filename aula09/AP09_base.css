@@ -1,0 +1,198 @@
+/*
+  AP09_base.css — AgroVale
+  Acumula: CSS base + Flexbox (resultado das Aulas 06-08)
+  AP09: adicione as media queries nos blocos TODO abaixo
+*/
+
+/* ===========================
+   VARIÁVEIS E RESET
+   =========================== */
+:root {
+  --verde:  #1E5631;
+  --verde2: #1E8449;
+  --verde3: #3FA06A;
+  --areia:  #FAF9F4;
+  --ambar:  #C8892A;
+  --tinta:  #1A1A1A;
+  --cinza:  #5A6360;
+  --linha:  #D8DED9;
+  --fundo2: #EAF2ED;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  color: var(--tinta);
+  background: var(--areia);
+  line-height: 1.6;
+}
+a { color: var(--verde2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+ul { list-style: none; }
+
+/* ===========================
+   CABEÇALHO (Flexbox — Aula 06 passo 2)
+   =========================== */
+#cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--verde);
+  color: var(--areia);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo { display: flex; align-items: center; gap: 0.5rem; }
+.logo-icone { font-size: 1.5rem; }
+.logo-texto { font-size: 1.25rem; font-weight: 700; color: var(--areia); }
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a { color: var(--areia); font-weight: 500; }
+.nav-links a:hover { color: var(--ambar); text-decoration: none; }
+
+/* ===========================
+   HERO
+   =========================== */
+#hero {
+  background: linear-gradient(135deg, var(--verde), var(--verde2));
+  color: var(--areia);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.hero-conteudo { max-width: 700px; margin: 0 auto; }
+.titulo-hero {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--areia);
+}
+#hero p { font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9; }
+.btn-primario {
+  display: inline-block;
+  background: var(--ambar);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.btn-primario:hover { background: #a87020; text-decoration: none; }
+
+/* ===========================
+   LAYOUT PRINCIPAL (Flexbox — Aula 06 passo 3)
+   =========================== */
+.layout-conteudo {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+.conteudo-principal { flex: 1; }
+.aside-lateral { width: 280px; flex-shrink: 0; }
+
+/* Seções */
+section { margin-bottom: 3rem; }
+section h2 {
+  font-size: 1.75rem;
+  color: var(--verde);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--verde3);
+}
+section p { margin-bottom: 0.75rem; color: var(--cinza); }
+
+/* Grade de cards (Flexbox) */
+.grade-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.card {
+  flex: 1 1 220px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid var(--linha);
+}
+.card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.card-corpo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: calc(100% - 160px);
+}
+.card h3 { color: var(--verde); margin-bottom: 0.5rem; font-size: 1rem; }
+.card-descricao { flex: 1; font-size: 0.9rem; color: var(--cinza); margin-bottom: 1rem; }
+.card-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.preco { font-weight: 700; color: var(--verde2); }
+.btn-card {
+  background: var(--verde2);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+.btn-card:hover { background: var(--verde); text-decoration: none; }
+
+/* Aside */
+.aside-bloco {
+  background: var(--fundo2);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  border-left: 4px solid var(--verde3);
+}
+.aside-bloco h3 { color: var(--verde); margin-bottom: 0.5rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.aside-bloco p, .aside-bloco li { font-size: 0.9rem; color: var(--cinza); }
+.aside-bloco ul { padding-left: 0.25rem; }
+.aside-bloco li { margin-bottom: 0.3rem; }
+
+/* ===========================
+   RODAPÉ
+   =========================== */
+#rodape {
+  background: var(--verde);
+  color: var(--areia);
+  padding: 3rem 2rem 1.5rem;
+}
+.rodape-grid {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+.rodape-grid h4 { color: var(--ambar); margin-bottom: 0.75rem; }
+.rodape-grid p, .rodape-grid a { color: rgba(250,249,244,0.8); font-size: 0.9rem; }
+.rodape-grid li { margin-bottom: 0.4rem; }
+.rodape-copy { text-align: center; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; max-width: 1200px; margin: 0 auto; }
+
+/* ===========================
+   TODO PASSO 1: Imagens responsivas e overflow
+   =========================== */
+/* img { max-width: 100%; height: auto; display: block; } */
+/* body { overflow-x: hidden; } */
+
+/* ===========================
+   TODO PASSO 2: @media (max-width:768px) — Cabeçalho
+   =========================== */
+
+/* ===========================
+   TODO PASSO 3: @media (max-width:768px) — Layout coluna
+   =========================== */
+
+/* ===========================
+   TODO PASSO 4: @media (max-width:768px) — Tipografia
+   =========================== */
