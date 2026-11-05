@@ -1,0 +1,200 @@
+/* AP13 — Catálogo AgroVale · CSS Base */
+:root {
+  --verde:   #1E5631;
+  --verde2:  #2d7a47;
+  --areia:   #FAF9F4;
+  --ambar:   #c8922a;
+  --ambar2:  #e0a83a;
+  --tinta:   #1a1a2e;
+  --cinza:   #666666;
+  --borda:   #d0d8c8;
+  --branco:  #ffffff;
+  --erro:    #c0392b;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--areia);
+  color: var(--tinta);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── CABEÇALHO ── */
+#cabecalho {
+  background: var(--verde);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+.cabecalho-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.logo-icone { font-size: 1.5rem; }
+
+.logo-texto {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--branco);
+  letter-spacing: 1px;
+}
+
+#menu-principal {
+  display: flex;
+  gap: 1.2rem;
+}
+
+#menu-principal a {
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  font-size: .95rem;
+  transition: color .2s;
+}
+
+#menu-principal a:hover { color: var(--ambar2); }
+
+/* ── CONTEÚDO ── */
+main {
+  flex: 1;
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+#catalogo h1 {
+  font-size: 1.6rem;
+  color: var(--verde);
+  margin-bottom: .3rem;
+}
+
+.subtitulo {
+  color: var(--cinza);
+  margin-bottom: 1.5rem;
+  font-size: .95rem;
+}
+
+/* ── CONTROLES ── */
+.controle-busca,
+.controle-adicionar {
+  display: flex;
+  gap: .6rem;
+  margin-bottom: .9rem;
+  flex-wrap: wrap;
+}
+
+input[type="text"] {
+  padding: .55rem .9rem;
+  border: 2px solid var(--borda);
+  border-radius: 6px;
+  font-size: .95rem;
+  flex: 1;
+  min-width: 180px;
+  transition: border-color .2s;
+  background: var(--branco);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--verde2);
+}
+
+button#btn-adicionar {
+  padding: .55rem 1.3rem;
+  background: var(--verde);
+  color: var(--branco);
+  border: none;
+  border-radius: 6px;
+  font-size: .95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+  white-space: nowrap;
+}
+
+button#btn-adicionar:hover { background: var(--verde2); }
+
+/* ── LISTA DE PRODUTOS ── */
+#lista-produtos {
+  list-style: none;
+  margin-top: .5rem;
+}
+
+#lista-produtos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .75rem 1rem;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  transition: box-shadow .15s;
+}
+
+#lista-produtos li:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+#lista-produtos li.item-ativo {
+  border-color: var(--ambar);
+  background: #fffbf2;
+  box-shadow: 0 0 0 2px rgba(200,146,42,.2);
+}
+
+/* botão de remover — o aluno vai criar com JS */
+.btn-remover {
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: .85rem;
+  cursor: pointer;
+  color: var(--cinza);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, color .15s;
+  flex-shrink: 0;
+}
+
+.btn-remover:hover {
+  background: #ffe0e0;
+  color: var(--erro);
+  border-color: var(--erro);
+}
+
+#msg-vazia {
+  color: var(--cinza);
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* ── RODAPÉ ── */
+#rodape {
+  background: var(--verde);
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  margin-top: 2rem;
+}

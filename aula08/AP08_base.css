@@ -43,8 +43,9 @@ body {
   background-color: var(--areia);
   color: var(--tinta);
   line-height: 1.6;
-  /* TODO PASSO 1: transformar #pagina em grid container de página */
-  /* Dica: display:grid; grid-template-rows: auto 1fr auto; min-height:100vh */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 /* ============================================================
@@ -112,6 +113,10 @@ body {
 */
 #explorar {
   margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 /* TODO PASSO 2: usar grid-column para o h2 ocupar toda a largura
@@ -121,6 +126,7 @@ body {
   color: var(--verde);
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  grid-column: 1 / -1;
 }
 
 .card-categoria {
@@ -159,15 +165,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* TODO PASSO 3: substituir o Flexbox abaixo por Grid responsivo
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-   gap: 1.5rem;
-   (e remover o flex: 1 1 220px do .card)
-*/
+
 .grade-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
@@ -176,7 +177,6 @@ body {
    ============================================================ */
 
 .card {
-  flex: 1 1 220px;
   background-color: #fff;
   border: 1px solid var(--linha);
   border-radius: 10px;
@@ -245,6 +245,20 @@ body {
 
 .btn-card:hover {
   background-color: var(--verde);
+}
+
+@media (min-width: 900px){
+  #conteudo-principal{
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-areas: 
+    "explorar explorar"
+    "destaques aside";
+    gap: 2rem;
+    align-items: start;
+  }
+  #explorar  { grid-area: explorar; }
+  #destaques { grid-area: destaques; }
 }
 
 /* ============================================================

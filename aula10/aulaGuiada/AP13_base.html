@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP13 — Catálogo AgroVale</title>
+  <link rel="stylesheet" href="AP13_base.css">
+  <script src="AP13_app.js" defer></script>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header id="cabecalho">
+    <div class="cabecalho-inner">
+      <div class="logo">
+        <span class="logo-icone">🌱</span>
+        <span class="logo-texto">AgroVale</span>
+      </div>
+      <nav id="menu-principal">
+        <a href="#">Início</a>
+        <a href="#">Produtos</a>
+        <a href="#">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <section id="catalogo">
+      <h1>Catálogo de Produtos</h1>
+      <p class="subtitulo">Gerencie os produtos da cooperativa AgroVale.</p>
+
+      <!-- Busca -->
+      <div class="controle-busca">
+        <input type="text" id="input-busca" placeholder="🔍 Buscar produto...">
+      </div>
+
+      <!-- Adicionar -->
+      <div class="controle-adicionar">
+        <input type="text" id="input-produto" placeholder="Nome do produto">
+        <button id="btn-adicionar">+ Adicionar</button>
+      </div>
+
+      <!-- Lista de produtos -->
+      <ul id="lista-produtos"></ul>
+
+      <!-- Mensagem quando lista está vazia -->
+      <p id="msg-vazia" style="display:none;">Nenhum produto encontrado.</p>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer id="rodape">
+    <p>AgroVale Cooperativa · AP13 — Programação Web I · IF Goiano 2026</p>
+  </footer>
+
+</body>
+</html>
