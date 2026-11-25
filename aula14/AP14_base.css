@@ -1,0 +1,256 @@
+/* AP14 — Catálogo AgroVale com Dados Externos */
+
+:root {
+  --verde:   #1E5631;
+  --verde2:  #2d7a47;
+  --areia:   #FAF9F4;
+  --ambar:   #c8922a;
+  --ambar2:  #e0a83a;
+  --tinta:   #1a1a2e;
+  --cinza:   #6b7280;
+  --borda:   #d1d5db;
+  --branco:  #ffffff;
+  --sombra:  rgba(0,0,0,.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--areia);
+  color: var(--tinta);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── CABEÇALHO ── */
+#cabecalho {
+  background: var(--verde);
+  color: var(--branco);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#cabecalho h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+#cabecalho h1 span {
+  color: var(--ambar2);
+}
+
+nav a {
+  color: rgba(255,255,255,.85);
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-size: .9rem;
+  transition: color .2s;
+}
+
+nav a:hover { color: var(--ambar2); }
+
+/* ── CONTEÚDO PRINCIPAL ── */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── BARRA DE CONTROLES ── */
+.controles {
+  display: flex;
+  gap: .8rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#input-busca {
+  flex: 1;
+  min-width: 200px;
+  padding: .55rem 1rem;
+  border: 2px solid var(--borda);
+  border-radius: 8px;
+  font-size: .95rem;
+  transition: border-color .2s;
+}
+
+#input-busca:focus {
+  outline: none;
+  border-color: var(--verde2);
+}
+
+#btn-ordenar {
+  padding: .55rem 1.2rem;
+  background: var(--verde);
+  color: var(--branco);
+  border: none;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+  white-space: nowrap;
+}
+
+#btn-ordenar:hover { background: var(--verde2); }
+
+/* ── GRID DE CARDS ── */
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px var(--sombra);
+  border-color: var(--ambar);
+}
+
+.card-categoria {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: #e8f5ed;
+  color: var(--verde);
+  margin-bottom: .6rem;
+}
+
+.card-nome {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--tinta);
+  margin-bottom: .3rem;
+}
+
+.card-preco {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ambar);
+}
+
+.card-estoque {
+  font-size: .82rem;
+  color: var(--cinza);
+  margin-top: .4rem;
+}
+
+.card-sem-estoque {
+  opacity: .55;
+}
+
+.card-sem-estoque .card-estoque {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* ── PAINEL DE DETALHES ── */
+#painel-detalhe {
+  background: var(--branco);
+  border: 2px solid var(--verde);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+#btn-fechar {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--cinza);
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background .15s;
+}
+
+#btn-fechar:hover {
+  background: #f3f4f6;
+  color: var(--tinta);
+}
+
+#conteudo-detalhe h2 {
+  font-size: 1.3rem;
+  color: var(--verde);
+  margin-bottom: .8rem;
+}
+
+.detalhe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: .6rem .8rem;
+  margin-bottom: 1rem;
+}
+
+.detalhe-item label {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--cinza);
+  letter-spacing: .5px;
+  display: block;
+}
+
+.detalhe-item span {
+  font-size: .95rem;
+  color: var(--tinta);
+}
+
+.detalhe-descricao {
+  font-size: .92rem;
+  color: var(--cinza);
+  line-height: 1.6;
+  border-top: 1px solid var(--borda);
+  padding-top: .8rem;
+  margin-top: .4rem;
+}
+
+/* ── UTILITÁRIOS ── */
+.oculto { display: none !important; }
+
+.vazio-msg {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  color: var(--cinza);
+  font-size: .95rem;
+}
+
+/* ── RODAPÉ ── */
+#rodape {
+  background: var(--verde);
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  margin-top: auto;
+}

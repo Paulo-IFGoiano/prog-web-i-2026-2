@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nome": "Milho Híbrido BRS 1030",    "preco": 12.90, "categoria": "Grãos",   "estoque": 150, "unidade": "kg"    },
+  { "id": 2, "nome": "Soja Convencional Elite",    "preco": 18.50, "categoria": "Grãos",   "estoque": 0,   "unidade": "kg"    },
+  { "id": 3, "nome": "Café Especial Serra",        "preco": 45.00, "categoria": "Bebidas", "estoque": 80,  "unidade": "kg"    },
+  { "id": 4, "nome": "Fertilizante NPK 10-10-10", "preco": 89.90, "categoria": "Insumos", "estoque": 45,  "unidade": "saco"  },
+  { "id": 5, "nome": "Feijão Carioca Premium",     "preco": 9.80,  "categoria": "Grãos",   "estoque": 200, "unidade": "kg"    },
+  { "id": 6, "nome": "Defensivo Agrícola Bio",     "preco": 125.00,"categoria": "Insumos", "estoque": 30,  "unidade": "litro" },
+  { "id": 7, "nome": "Arroz Agulhinha Longo",      "preco": 7.50,  "categoria": "Grãos",   "estoque": 0,   "unidade": "kg"    },
+  { "id": 8, "nome": "Farelo de Soja 46%",         "preco": 2.90,  "categoria": "Rações",  "estoque": 500, "unidade": "kg"    }
+]
